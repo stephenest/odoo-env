@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_demo_order_user,access.purchase.demo.order.user,model_purchase_demo_order,,1,1,1,1
+access_purchase_demo_line_user,access.purchase.demo.line.user,model_purchase_demo_line,,1,1,1,1
+access_purchase_demo_approval_user,access.purchase.demo.approval.user,model_purchase_demo_approval,,1,1,1,1

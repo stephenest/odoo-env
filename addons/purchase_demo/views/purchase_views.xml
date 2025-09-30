@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_purchase_demo_order_tree" model="ir.ui.view">
+    <field name="name">purchase.demo.order.tree</field>
+    <field name="model">purchase.demo.order</field>
+    <field name="arch" type="xml">
+      <tree string="Purchase Orders">
+        <field name="name"/>
+        <field name="partner_id"/>
+        <field name="date_order"/>
+        <field name="state"/>
+        <field name="total_amount"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_purchase_demo_order_form" model="ir.ui.view">
+    <field name="name">purchase.demo.order.form</field>
+    <field name="model">purchase.demo.order</field>
+    <field name="arch" type="xml">
+      <form string="Purchase Order">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="partner_id"/>
+            <field name="date_order"/>
+            <field name="state"/>
+            <field name="total_amount"/>
+          </group>
+          <notebook>
+            <page string="Lines">
+              <field name="line_ids">
+                <tree editable="bottom">
+                  <field name="name"/>
+                  <field name="product_id"/>
+                  <field name="quantity"/>
+                  <field name="price_unit"/>
+                  <field name="price_subtotal"/>
+                </tree>
+              </field>
+            </page>
+            <page string="Approvals">
+              <field name="approval_level"/>
+            </page>
+          </notebook>
+          <footer>
+            <button name="action_request_approval" type="object" string="Request Approval" class="btn-primary"/>
+            <button name="action_approve" type="object" string="Approve"/>
+            <button name="action_done" type="object" string="Mark Done"/>
+          </footer>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_purchase_demo_line_tree" model="ir.ui.view">
+    <field name="name">purchase.demo.line.tree</field>
+    <field name="model">purchase.demo.line</field>
+    <field name="arch" type="xml">
+      <tree string="Order Lines">
+        <field name="name"/>
+        <field name="product_id"/>
+        <field name="quantity"/>
+        <field name="price_unit"/>
+        <field name="price_subtotal"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Menus -->
+  <record id="menu_purchase_demo_root" model="ir.ui.menu">
+    <field name="name">Purchase Demo</field>
+    <field name="sequence">10</field>
+  </record>
+
+  <record id="menu_purchase_demo_orders" model="ir.ui.menu">
+    <field name="name">Orders</field>
+    <field name="parent_id" ref="menu_purchase_demo_root"/>
+    <field name="sequence">1</field>
+  </record>
+
+  <record id="action_purchase_demo_orders" model="ir.actions.act_window">
+    <field name="name">Purchase Orders</field>
+    <field name="res_model">purchase.demo.order</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="menu_purchase_demo_orders_action" model="ir.ui.menu">
+    <field name="name">Orders</field>
+    <field name="parent_id" ref="menu_purchase_demo_root"/>
+    <field name="action" ref="action_purchase_demo_orders"/>
+  </record>
+
+</odoo>
