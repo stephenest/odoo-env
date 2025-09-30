@@ -1,0 +1,39 @@
+2025-09-30 08:40:38.617 UTC [32962] LOG:  starting PostgreSQL 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-09-30 08:40:38.617 UTC [32962] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2025-09-30 08:40:38.618 UTC [32962] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5433.lock": Permission denied
+2025-09-30 08:40:38.619 UTC [32962] LOG:  database system is shut down
+2025-09-30 08:41:10.266 UTC [33641] LOG:  starting PostgreSQL 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-09-30 08:41:10.266 UTC [33641] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2025-09-30 08:41:10.267 UTC [33641] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5433.lock": Permission denied
+2025-09-30 08:41:10.268 UTC [33641] LOG:  database system is shut down
+2025-09-30 08:42:38.827 UTC [34775] LOG:  starting PostgreSQL 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-09-30 08:42:38.827 UTC [34775] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2025-09-30 08:42:38.829 UTC [34775] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2025-09-30 08:42:38.833 UTC [34778] LOG:  database system was shut down at 2025-09-30 08:40:37 UTC
+2025-09-30 08:42:38.839 UTC [34775] LOG:  database system is ready to accept connections
+2025-09-30 08:42:41.756 UTC [34920] FATAL:  role "odoo" does not exist
+2025-09-30 08:42:55.769 UTC [35118] LOG:  invalid length of startup packet
+2025-09-30 08:42:55.787 UTC [35119] LOG:  invalid length of startup packet
+2025-09-30 08:42:55.802 UTC [35120] LOG:  invalid length of startup packet
+2025-09-30 08:42:55.820 UTC [35121] LOG:  invalid length of startup packet
+2025-09-30 08:44:10.204 UTC [35726] FATAL:  role "postgres" does not exist
+2025-09-30 08:44:10.210 UTC [35728] FATAL:  role "postgres" does not exist
+2025-09-30 08:44:12.215 UTC [35766] FATAL:  role "postgres" does not exist
+2025-09-30 08:44:35.353 UTC [35983] LOG:  invalid length of startup packet
+2025-09-30 08:44:35.381 UTC [35984] LOG:  invalid length of startup packet
+2025-09-30 08:44:35.410 UTC [35985] LOG:  invalid length of startup packet
+2025-09-30 08:44:35.451 UTC [35986] LOG:  invalid length of startup packet
+2025-09-30 08:46:35.335 UTC [36868] ERROR:  role "odoo" already exists
+2025-09-30 08:46:35.335 UTC [36868] STATEMENT:  CREATE ROLE odoo LOGIN SUPERUSER PASSWORD 'odoo';
+2025-09-30 08:46:35.347 UTC [36870] ERROR:  database "odoo" already exists
+2025-09-30 08:46:35.347 UTC [36870] STATEMENT:  CREATE DATABASE odoo OWNER odoo;
+2025-09-30 08:47:38.933 UTC [34776] LOG:  checkpoint starting: time
+2025-09-30 08:51:32.535 UTC [34776] LOG:  checkpoint complete: wrote 2339 buffers (14.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=233.530 s, sync=0.068 s, total=233.603 s; sync files=1003, longest=0.004 s, average=0.001 s; distance=17475 kB, estimate=17475 kB; lsn=0/2600318, redo lsn=0/26002A8
+2025-09-30 08:57:38.666 UTC [34776] LOG:  checkpoint starting: time
+2025-09-30 09:02:08.125 UTC [34776] LOG:  checkpoint complete: wrote 4517 buffers (27.6%); 0 WAL file(s) added, 0 removed, 2 recycled; write=269.392 s, sync=0.062 s, total=269.460 s; sync files=1959, longest=0.009 s, average=0.001 s; distance=33773 kB, estimate=33773 kB; lsn=0/470E898, redo lsn=0/46FB808
+2025-09-30 09:12:38.315 UTC [34776] LOG:  checkpoint starting: time
+2025-09-30 09:12:44.646 UTC [34776] LOG:  checkpoint complete: wrote 64 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.317 s, sync=0.007 s, total=6.332 s; sync files=33, longest=0.004 s, average=0.001 s; distance=353 kB, estimate=30431 kB; lsn=0/4753D60, redo lsn=0/4753D28
+2025-09-30 09:17:38.746 UTC [34776] LOG:  checkpoint starting: time
+2025-09-30 09:17:38.855 UTC [34776] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.003 s, total=0.109 s; sync files=2, longest=0.002 s, average=0.002 s; distance=1 kB, estimate=27388 kB; lsn=0/47542B0, redo lsn=0/4754278
+2025-09-30 09:22:38.942 UTC [34776] LOG:  checkpoint starting: time
+2025-09-30 09:27:08.171 UTC [34776] LOG:  checkpoint complete: wrote 3176 buffers (19.4%); 0 WAL file(s) added, 0 removed, 2 recycled; write=269.122 s, sync=0.096 s, total=269.229 s; sync files=1440, longest=0.004 s, average=0.001 s; distance=28067 kB, estimate=28067 kB; lsn=0/62F1EE0, redo lsn=0/62BD1E8
